@@ -15,22 +15,59 @@ header .logo a {
 }
 header nav ul {
     list-style: none;
+    display: flex;
+    padding: 0;
 }
 nav li {
-    display: inline;
+    display: inline-flex;
+    margin: 0.2rem;
 }
 nav a {
     color: #0DE;
     background-color: #000;
+    border-bottom: 0.2rem solid #0DE;
     padding: 0.2rem;
     margin: 0.1rem;
-    border-bottom: 0.2rem solid #0DE;
     text-decoration: none;
+    box-shadow: 3px 3px 0 #0003, 0 0 0.1rem 0 #0003;
 }
-
+nav a:hover {
+    color: #000;
+    background-color: #1AD;
+    border-bottom: 0.2rem solid #000;
+}
+#links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+#links li {
+    display: inline-flex;
+    margin: 0.2rem;
+}
+#links a {
+    margin: 0.1rem;
+}
+.fa-icons {
+    width: 2rem;
+}
 h1, h2, h3 {
     max-width: max-content;
     padding: 0 1rem;
     background: linear-gradient(75deg, #1ad, #0DEB, #0DE8, #0DE4);
     border-bottom: 0.4rem solid black;
+}
+article {
+    border: 2px dotted #000;
+    margin: 0.25rem;
+}
+article h2, article h3 {
+    margin-top: 0;
+}
+article ul, article ol {
+    padding: 0;
+    list-style-position: inside;
+}
+section {
+    background-color: #8881;
 }
