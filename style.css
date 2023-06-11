@@ -1,40 +1,46 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     border-radius: 0px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html {
-    font-family: sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
+body {
+    background-color: #eee;
+}
+
 header .logo a {
+    /* LOGO */
     text-decoration: none;
     font-size: 200%;
     letter-spacing: 0.25rem;
     font-weight: bold;
     color: black;
-    text-shadow: 0.1rem 0.1rem #0DE, 0.15rem 0.15rem black;
+    /* text-shadow: 0.1rem 0.1rem #0DE, 0.15rem 0.15rem black; */
 }
 header nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
 }
 nav li {
     display: inline-flex;
     margin: 0.2rem;
 }
 nav a {
-    color: #0DE;
+    color: #FFF;
     background-color: #000;
-    border-bottom: 0.2rem solid #0DE;
-    padding: 0.2rem;
     margin: 0.1rem;
+    padding: 0.2rem;
     text-decoration: none;
     box-shadow: 3px 3px 0 #0003, 0 0 0.1rem 0 #0003;
 }
 nav a:hover {
-    color: #000;
-    background-color: #1AD;
-    border-bottom: 0.2rem solid #000;
+    text-decoration: underline;
 }
 #links {
     list-style: none;
@@ -48,26 +54,64 @@ nav a:hover {
 #links a {
     margin: 0.1rem;
 }
+#links a:hover {
+    scale: 1.15;
+}
 .fa-icons {
     width: 2rem;
 }
-h1, h2, h3 {
-    max-width: max-content;
-    padding: 0 1rem;
-    background: linear-gradient(75deg, #1ad, #0DEB, #0DE8, #0DE4);
-    border-bottom: 0.4rem solid black;
+
+.image {
+    width: 340px;
+    height: 340px;
+    overflow: hidden;
+    border-radius: 50%;
 }
-article {
-    border: 2px dotted #000;
+img {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+#figures {
+    border: 2px solid #FFF;
+    display: flex;
+    justify-content: space-evenly;
+}
+#figures figure {
     margin: 0.25rem;
+    
+    border: 0.5rem dashed #eef;
+    text-align: center;
 }
-article h2, article h3 {
-    margin-top: 0;
-}
-article ul, article ol {
-    padding: 0;
+
+ul, ol {
     list-style-position: inside;
 }
+
+.highlight {
+    font-weight: bold;
+}
+
+#view{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background-color: #eef;
+    box-shadow: 0 0 4px #0004;
+}
 section {
-    background-color: #8881;
+    margin: 1rem 0;
+}
+article {
+    margin: 1rem 0;
+    padding: 0.25rem 0;
+    background-color: #eef;
+}
+article li {
+    padding: 0 0.2rem;
+    border-bottom: 1px solid #0002;
+}
+article ul, article ol {
+    margin: 0.5rem 0;
 }
