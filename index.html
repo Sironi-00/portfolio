@@ -20,13 +20,13 @@
           </p>
         </div>
         <nav>
-          <ul>
+          <ul class="btn links">
             <li><a href="">About</a></li>
             <li><a href="">Skills</a></li>
             <li><a href="./projects/projects.html">Projects</a></li>
           </ul>
         </nav>
-        <ul id="links">
+        <ul class="fa links">
           <li>
             <a href="https://github.com/Sironi-00"
             target="_blank"
@@ -39,6 +39,7 @@
           </li>
           <li>
             <a href=""
+            target="_blank"
               ><img
                 class="fa-icons"
                 src="./resources/envelope-regular.svg"
@@ -48,6 +49,7 @@
           </li>
           <li>
             <a href=""
+            target="_blank"
               ><img
                 class="fa-icons"
                 src="./resources//globe-solid.svg"
@@ -61,7 +63,7 @@
         <section id="banner" class="notebook">
           <h1>About Me</h1>
           <p>
-            Hello, There! or Should I say "Hello, World!" I'm Fani Sironi Ndou,
+            Hello, There! or Should I say "Hello, World!" I'm <span class="highlight">Fani Sironi Ndou</span>,
             I'm currently learning Web Development with Code Academy. I have
             used resources like YouTube, FreeCodeCamp and SoloLearn which
             introduce me to programming and coding.
@@ -79,6 +81,8 @@
             lessons and provides projects at the end of each module, and the
             material is relevant. Through their carrer paths the lessons are
             inter-connected allowing you to deeply understand how they relate.
+            <br>
+            The community is also welcoming and has allowed me to know people from different parts of the work who also share similar interests
           </p>
           <article>
             <h3>Front-End</h3>
@@ -145,7 +149,7 @@
         <section>
           <h2>Extra(s)</h2>
           <article>
-            <h2>Tools</h2>
+            <h3>Tools</h3>
             <ul>
               <li>Coding : VScode</li>
               <li>Browser: Firefox</li>
@@ -178,6 +182,7 @@
           </article>
         </section>
         <section id="figures">
+          <h2>Figures</h2>
           <figure>
             <div class="image">
               <img src="./resources/P+IMG_6569().jpg" alt="My Picture" />
@@ -192,12 +197,21 @@
         </section>
       </main>
       <footer>
-        <h3>Contacts</h3>
-        <ul id="links">
-          <li><a href="">Mail</a></li>
-          <li><a href="#header">Back to Top</a></li>
-          <li><a href="">GitHub</a></li>
-        </ul>
+        <h2>Contacts</h2>
+        <div class="container">
+          <form action="http://localhost:4001/test" method="post">
+            <input type="text" name="name" placeholder="Name:" required minlength="3">
+            <input type="email" name="email" placeholder="Email:" required>
+            <input type="tel" name="" placeholder="Tel:">
+            <textarea name="message" cols="30" rows="6" placeholder="message" required minlength="3"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+          <ul class="btn links">
+            <li><a href="">Mail</a></li>
+            <li><a href="">GitHub</a></li>
+            <li><a href="#header">Back to Top</a></li>
+          </ul>
         <p>designed by Sironi,</p>
       </footer>
     </div>
