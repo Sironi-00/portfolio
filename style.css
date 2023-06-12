@@ -2,26 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 0.25rem;
-}
-
-:root {
-    --color0: #FFF;
-    --color1: #eef;
-    --color2: #000;
-    --color3: #0003;
-    --color4: #eee;
+    border-radius: 0px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
     font-family: 'Roboto',sans-serif;
-    scroll-behavior: smooth;
 }
 body {
-    background-color: var(--color0);
-    color: var(--color2);
+    background-color: #eee;
 }
 
 header .logo a {
@@ -30,7 +20,7 @@ header .logo a {
     font-size: 200%;
     letter-spacing: 0.25rem;
     font-weight: bold;
-    color: var(--color2);
+    color: black;
     /* text-shadow: 0.1rem 0.1rem #0DE, 0.15rem 0.15rem black; */
 }
 header li {
@@ -42,12 +32,12 @@ header li {
     margin: 0.751rem 1rem;
 }
 .btn.links a {
-    color: var(--color0);
-    background-color: var(--color2);
+    color: #FFF;
+    background-color: #000;
     margin: 0.1rem;
     padding: 0.2rem;
     text-decoration: none;
-    box-shadow: 3px 3px 0 var(--color3), 0 0 0.1rem 0 var(--color3);
+    box-shadow: 3px 3px 0 #0003, 0 0 0.1rem 0 #0003;
 }
 .btn.links a:hover {
     text-decoration: underline;
@@ -62,49 +52,40 @@ header li {
     width: 2rem;
 }
 
-#figures figure {
+.image {
     width: 340px;
-    margin: 1rem 0;
-    text-align: center;
+    height: 340px;
+    overflow: hidden;
+    border-radius: 50%;
 }
-figure figcaption {
-    text-decoration: underline;
-    opacity: 0.7;
-    word-wrap: break-word;
-}
-.figures {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-figure .image {
-    border-radius: 1rem;
-    border: 0.5rem dashed var(--color0);
-    background-color: var(--color1);
+img {
+    width: auto;
+    height: 100%;
     overflow: hidden;
 }
-.image img {
-    width: 100%;
-    height: auto;
-    object-position: center;
-    opacity: 0.9;
-}
 
+#figures figure {
+    width: max-content;
+    margin: 0.25rem;
+    border: 0.5rem dashed #eef;
+    background-color: #EEE;
+    text-align: center;
+}
 
 ul, ol {
     list-style-position: inside;
 }
 
 .highlight {
-    /* span highlight */
     font-weight: bold;
 }
 
 #view {
+    
     margin: 0 auto;
     padding: 0 1.5rem;
-    background-color: var(--color1);
-    box-shadow: 0 0 1rem var(--color3);
+    background-color: #eef;
+    box-shadow: 0 0 4px #0004;
 }
 @media screen and (min-width: 1200px) {
     #view {
@@ -118,17 +99,17 @@ section {
 article {
     margin: 1rem 0;
     padding: 0.25rem 0;
+    background-color: #eef;
 }
 article li {
     padding: 0 0.2rem;
-    border-bottom: 1px solid var(--color3);
-    border-radius: 0;
+    border-bottom: 1px solid #0002;
 }
 article ul, article ol {
     margin: 0.5rem 0;
 }
-.outro {
-    padding: 2rem 0;
+footer {
+    padding-bottom: 2rem;
 }
 .container {
     display: grid;
@@ -158,18 +139,20 @@ input, textarea {
     border: none;
     margin: 0.25rem 0;
     padding: 0.25rem;
-    background-color: var(--color0);
 }
 input[name], textarea {
-    border-left: 2px solid var(--color3);
-    border-bottom: 2px solid var(--color3);
+    background-color: #FFF9;
+    border-left: 2px solid #0003;
+    border-bottom: 2px solid #0003;
+    /* width: 25%; */
     width: 100%;
     min-width: 200px;
 }
 input[type=submit] {
+    background-color: #FFF;
     width: max-content;
     margin: auto;
-    border: 2px solid var(--color3);
+    border: 2px solid #0003;
 }
 
 /* Show / Hide articles logic */
