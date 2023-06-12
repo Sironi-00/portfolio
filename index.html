@@ -21,8 +21,8 @@
         </div>
         <nav>
           <ul class="btn links">
-            <li><a href="">About</a></li>
-            <li><a href="">Skills</a></li>
+            <li><a href="#banner">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="./projects/projects.html">Projects</a></li>
           </ul>
         </nav>
@@ -33,25 +33,25 @@
                 class="fa-icons"
                 src="./resources/github.svg"
                 alt="Github"
-                title="github"
+                title="Github"
             /></a>
           </li>
           <li>
-            <a href="" target="_blank"
+            <a href="#contacts"
               ><img
                 class="fa-icons"
                 src="./resources/envelope-regular.svg"
-                alt="mail"
-                title="mail"
+                alt="contact me"
+                title="Contact me"
             /></a>
           </li>
           <li>
-            <a href="" target="_blank"
+            <a href="https://github.com/Sironi-00/portfolio" target="_blank"
               ><img
                 class="fa-icons"
                 src="./resources//globe-solid.svg"
                 alt="Site"
-                title="website"
+                title="Source code"
             /></a>
           </li>
         </ul>
@@ -142,7 +142,7 @@
               <li>Java</li>
             </ol>
           </article>
-          <article>
+          <article id="skills">
             <h3>Skills</h3>
             <ul>
               <li>npm & NodeJs</li>
@@ -160,7 +160,7 @@
             <ul>
               <li>Coding : VScode</li>
               <li>Browser: Firefox</li>
-              <li>OS: Fedora KDE, ubuntu vm, Windows 10 PC</li>
+              <li>OS: Fedora KDE, ubuntu vm, Windows 10</li>
             </ul>
           </article>
           <article>
@@ -189,22 +189,37 @@
           </article>
         </section>
         <section id="figures">
-          <h2>Figures</h2>
-          <figure>
-            <div class="image">
-              <img src="./resources/P+IMG_6569().jpg" alt="My Picture" />
-            </div>
-            <figcaption>Sironi in 2023 (location?)</figcaption>
-            <ul class="socials">
-              <li><a href="">Fa Social</a></li>
-              <li><a href="">Fa Social</a></li>
-              <li><a href="">Fa Social</a></li>
-            </ul>
-          </figure>
+          <h2>Media</h2>
+          <div class="figures">
+            <figure>
+              <div class="image">
+                <img src="./resources/grayscale_me.jpg" alt="My black and white picture" />
+              </div>
+              <figcaption>
+                Me in 2022 (@Home)
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="image">
+                <img src="./resources/flower_in_hand.jpg" alt="with a flower in hand" />
+              </div>
+              <figcaption>
+                A flower in hand 2022 (@North Berwick side)
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="image">
+                <img src="./resources/thumb_rock.jpg" alt="a rock that looks like thumb up" />
+              </div>
+              <figcaption>
+                a rock that looks like thumb up 2022 (@Arthur's Seat)
+              </figcaption>
+            </figure>
+          </div>
         </section>
       </main>
-      <footer>
-        <h2>Contacts</h2>
+      <footer id="contacts">
+        <h2>Contact Me</h2>
         <div class="container">
           <form action="http://localhost:4001/test" method="post">
             <input
@@ -232,7 +247,7 @@
           <li><a href="">GitHub</a></li>
           <li><a href="#header">Back to Top</a></li>
         </ul>
-        <p>designed by Sironi,</p>
+        <p class="outro">designed by <span class="highlight">Me</span></p>
       </footer>
     </div>
   </body>
