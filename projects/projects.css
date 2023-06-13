@@ -1,0 +1,75 @@
+.dev-warning {
+    text-align: center;
+    margin: 5rem;
+    animation: blink 1s linear 0.7ms infinite;
+}
+@keyframes blink {
+    from {}
+    35% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.15;
+    }
+    65% {
+        scale: 1.05;
+    }
+    to {}
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --nav-x: 4rem;
+    --nav-y: 2.35rem;
+    --pad1: 0.5rem;
+}
+body {
+    background-color: #EEE;
+    position: relative;
+    height: 100vh;
+    max-height: 100dvh;
+}
+nav a {
+    background-color: #1ad;
+    color: #FFF;
+    text-shadow: 2px 2px 2px #000;
+    text-decoration: none;
+}
+.nav-link {
+    position: fixed;
+    width: var(--nav-x);
+    height: var(--nav-y);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-1 {
+    top: var(--pad1);
+    left: calc(50% - (var(--nav-x)/2));
+}
+.nav-2 {
+    top: calc(50% - (var(--nav-y)/2));
+    right: var(--pad1);
+}
+.nav-3 {
+    bottom: var(--pad1);
+    left: calc(50% - (var(--nav-x)/2));
+}
+.nav-4 {
+    top: calc(50% - (var(--nav-y)/2));
+    left: var(--pad1);
+}
+
+main {
+    background-color: #0DE;
+    border: 0.25rem solid #000;
+    position: fixed;
+    width: calc(100% - ((var(--nav-x)*2) + (var(--pad1)*4)));
+    height: calc(100% - ((var(--nav-y)*2) + (var(--pad1)*4)));
+    top: calc((var(--pad1)*2) + var(--nav-y));
+    left: calc((var(--pad1)*2) + var(--nav-x));
+}
