@@ -1,7 +1,9 @@
 .dev-warning {
-    text-align: center;
-    margin: 5rem;
-    animation: blink 1s linear 0.7ms infinite;
+    position: absolute;
+    top: -3%;
+    left: 25%;
+    translate: -50% -50%;
+    animation: blink 2.5s linear 0.7ms infinite;
 }
 @keyframes blink {
     from {}
@@ -20,6 +22,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border-radius: 0.35rem;
 }
 :root {
     --nav-x: 4rem;
@@ -31,13 +34,22 @@ body {
     position: relative;
     height: 100vh;
     max-height: 100dvh;
+    font-family: sans-serif;
 }
 nav a {
     background-color: #1ad;
-    color: #FFF;
-    text-shadow: 2px 2px 2px #000;
+    color: #000;
+    /* text-shadow: 1px 1px 2px #000; */
     text-decoration: none;
+        box-shadow: 3px 3px 0 #0003, 0 0 0.1rem 0 #000;
 }
+nav a:hover {
+    text-decoration: underline;
+}
+nav a:active {
+    scale: 0.9;
+}
+
 .nav-link {
     position: fixed;
     width: var(--nav-x);
@@ -72,4 +84,67 @@ main {
     height: calc(100% - ((var(--nav-y)*2) + (var(--pad1)*4)));
     top: calc((var(--pad1)*2) + var(--nav-y));
     left: calc((var(--pad1)*2) + var(--nav-x));
+}
+#main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    overflow-x: auto;
+}
+.project {
+    background-color: #0003;
+    border: 0.1rem solid #FFF;
+    margin: 1rem;
+    padding: 0rem 0.5rem;
+    position: relative;
+}
+.project h2 {
+    text-align: center;
+    margin: 0.75rem 0;
+}
+.project .preview {
+    background-color: #256;
+    border: 0.1rem solid #0003;
+    overflow: hidden;
+    max-height: 300px;
+    margin: 0.5rem 0 ;
+}
+.preview img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.enlarge {
+    position: relative;
+    z-index: 1;
+    width: max-content;
+    max-height: max-content;
+}
+.description {
+    background-color: #0002;
+    padding: 0.25rem 0.75rem;
+}
+.description p {
+    font-weight: 600;
+    text-align: center;
+}
+.description .buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.description .buttons a {
+    color: blue;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+.description ul {
+    list-style-position: inside;
+    list-style-type: square;
+    margin:  0.35rem 0;
+}
+.description li {
+    border-bottom: 2px solid #0004;
+    border-radius: 0;
 }
