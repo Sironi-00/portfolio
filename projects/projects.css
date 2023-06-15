@@ -1,9 +1,8 @@
 .dev-warning {
     position: absolute;
-    top: -3%;
-    left: 25%;
-    translate: -50% -50%;
-    animation: blink 2.5s linear 0.7ms infinite;
+    bottom: -5%;
+    left: 5%;
+    animation: blink 2.5s linear 0.7s infinite;
 }
 @keyframes blink {
     from {}
@@ -23,6 +22,7 @@
     margin: 0;
     padding: 0;
     border-radius: 0.35rem;
+    transition: all 0.35s;
 }
 :root {
     --nav-x: 4rem;
@@ -75,6 +75,31 @@ nav a:active {
     top: calc(50% - (var(--nav-y)/2));
     left: var(--pad1);
 }
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nav-link {
+        position: relative;
+    }
+    .nav-1 {
+        top: 0;
+        left: 0;
+    }
+    .nav-2 {
+        top: 0;
+        right:0;
+    }
+    .nav-3 {
+        bottom:0;
+        left: 0;
+    }
+    .nav-4 {
+        top: 0;
+        left: 0;
+    }
+}
 
 main {
     background-color: #0DE;
@@ -85,20 +110,27 @@ main {
     top: calc((var(--pad1)*2) + var(--nav-y));
     left: calc((var(--pad1)*2) + var(--nav-x));
 }
+@media screen and (max-width: 600px) {
+    main {
+        position: unset;
+        width: 100%;
+    }
+}
 #main {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    overflow-x: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: row wrap;
 }
 .project {
+    flex: 1 1 420px;
+    width: 45%;
+    min-width: 300px;
     background-color: #0003;
     border: 0.1rem solid #FFF;
     margin: 1rem;
     padding: 0rem 0.5rem;
-    position: relative;
 }
 .project h2 {
     text-align: center;
@@ -107,20 +139,35 @@ main {
 .project .preview {
     background-color: #256;
     border: 0.1rem solid #0003;
-    overflow: hidden;
-    max-height: 300px;
     margin: 0.5rem 0 ;
+    position: relative;
+    overflow: hidden;
 }
 .preview img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    max-height: 440px;
+    object-fit: contain;
+    cursor: pointer;
 }
-.enlarge {
-    position: relative;
-    z-index: 1;
-    width: max-content;
-    max-height: max-content;
+.preview img.enlarged {
+    scale: 1.05;
+}
+.switch {
+    position: absolute;
+    bottom: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #0003;
+    border: 0.1rem solid #FFF;
+}
+.switch.left {
+    left: 0.1rem;
+}
+.switch.right {
+    right: 0.1rem;
+}
+.hidden {
+    display: none;
 }
 .description {
     background-color: #0002;
@@ -129,6 +176,19 @@ main {
 .description p {
     font-weight: 600;
     text-align: center;
+}
+.description .tools {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.description .tools li {
+    background-color: #0002;
+    padding: 0 0.25rem;
+    border-top: 0.2rem solid #0000;
+}
+.description .tools li:nth-of-type(odd) {
+    border-top: 0.2rem solid #0002;
 }
 .description .buttons {
     display: flex;
