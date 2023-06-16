@@ -1,7 +1,8 @@
 .dev-warning {
-    position: absolute;
-    bottom: -5%;
-    left: 5%;
+    position: fixed;
+    z-index: 1;
+    bottom: 1%;
+    right: 2%;
     animation: blink 2.5s linear 0.7s infinite;
 }
 @keyframes blink {
@@ -58,6 +59,7 @@ nav a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .nav-1 {
     top: var(--pad1);
@@ -104,11 +106,7 @@ nav a:active {
 main {
     background-color: #0DE;
     border: 0.25rem solid #000;
-    position: fixed;
-    width: calc(100% - ((var(--nav-x)*2) + (var(--pad1)*4)));
-    height: calc(100% - ((var(--nav-y)*2) + (var(--pad1)*4)));
-    top: calc((var(--pad1)*2) + var(--nav-y));
-    left: calc((var(--pad1)*2) + var(--nav-x));
+    width: 100%;
 }
 @media screen and (max-width: 600px) {
     main {
@@ -118,40 +116,59 @@ main {
 }
 #main {
     width: 100%;
-    height: 100%;
     overflow-y: auto;
-    display: flex;
+    display: inline-flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 .project {
-    flex: 1 1 420px;
-    width: 45%;
-    min-width: 300px;
+    flex: 1 1 45%;
+    /* width: 45%; */
+    /* width: auto; */
+    min-width: min(300px, 60%);
+    max-width: max(600px, 45%);
     background-color: #0003;
     border: 0.1rem solid #FFF;
-    margin: 1rem;
+    margin: 0.25rem;
     padding: 0rem 0.5rem;
 }
 .project h2 {
     text-align: center;
     margin: 0.75rem 0;
 }
+.project-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+    .project-content {
+        flex-wrap: wrap;
+    }
+}
 .project .preview {
+    flex: 1 1 55%;
+    /* width: 45%; */
+    min-width: max(300px, 63%);
+    max-width: max(440px, 63%);
+    height: max-content;
     background-color: #256;
     border: 0.1rem solid #0003;
-    margin: 0.5rem 0 ;
+    margin: 0.25rem 0 ;
     position: relative;
     overflow: hidden;
 }
 .preview img {
     width: 100%;
-    height: 100%;
+    height: auto;
     max-height: 440px;
     object-fit: contain;
     cursor: pointer;
 }
 .preview img.enlarged {
-    scale: 1.05;
+    /* scale: 1.05; */
+    object-fit: fill;
+    width: 100%;
 }
 .switch {
     position: absolute;
@@ -170,8 +187,10 @@ main {
     display: none;
 }
 .description {
+    flex: 1 1 30%;
     background-color: #0002;
     padding: 0.25rem 0.75rem;
+    height: max-content;
 }
 .description p {
     font-weight: 600;

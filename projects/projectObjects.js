@@ -1,6 +1,6 @@
 const schema = {
     name: "",
-    imgSrc: [""],
+    imgSrc: [],
     liveLink: "",
     repoLink: "",
     description: {
@@ -65,7 +65,7 @@ const data = [
   },
   {
     name: "Jamming",
-    imgSrc: [""],
+    imgSrc: [],
     liveLink: "",
     repoLink: "",
     description: {
@@ -73,7 +73,17 @@ const data = [
       tools: ["npm", "JavaScript", "React"],
       features: ["Make request to API", "Search and Render fetched song."],
     },
-  },
+  }, {
+    name: "Adopt A Pet",
+    imgSrc: [],
+    liveLink: "",
+    repoLink: "https://github.com/Sironi-00/adopt-a-pet",
+    description: {
+      head: "Using React Router to render pets and filter based on user's search",
+      tools: ["React", "React Router", "npm"],
+      features: ["Search", "Category"],
+    },
+  }
 ];
 
 export default data;

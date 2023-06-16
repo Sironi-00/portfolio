@@ -1,6 +1,7 @@
 import projectsArray from './projectObjects.js';
 
 const root = document.querySelector("#main");
+root.innerHTML = '';
 
 const createProject = (projectJson, index) => {
   if (!projectJson.name) return;
@@ -8,14 +9,15 @@ const createProject = (projectJson, index) => {
   const imageId = `image-${index}`;
   const switchId = `switch-${imageId}`
   let currentImg = 0;
+  let imgPath = imgSrc[currentImg] || 0;
 
   const projectNode = document.createElement("div");
   projectNode.className = "project";
   projectNode.innerHTML = `
     <h2>${name}</h2>
-    <div class="moon">
-      <div class="preview">
-          <img id="${imageId}" src="${imgSrc[currentImg]}" alt="${name} preview" />
+    <div class="project-content">
+      <div class="preview ${imgSrc.length>0 || 'hidden'}">
+          <img id="${imageId}" src="${imgPath}" alt="${name} preview" />
           <button id="${switchId}-left" class="switch left ${imgSrc.length>1 || 'hidden'}">Prev</button>
           <button id="${switchId}-right" class="switch right ${imgSrc.length>1 || 'hidden'}">Next</button>
       </div>
@@ -24,7 +26,7 @@ const createProject = (projectJson, index) => {
               ${description.head}
           </p>
           <div class="buttons">
-              <a target="_blank" class="${liveLink.length>1 || 'hidden'}" href="${liveLink}">Live</a>
+              <a target="_blank" class="${liveLink.length>0 || 'hidden'}" href="${liveLink}">Live</a>
               <a target="_blank" href="${repoLink}">GitHub</a>
           </div>
           <ul class="tools">
@@ -49,11 +51,7 @@ const createProject = (projectJson, index) => {
       document.querySelector(`#${imageId}`).src = imgSrc[currentImg];
     };
     const enlarge = () => {
-      const enlarged = document.querySelectorAll('.enlarged');
-      if (enlarged) {
-        enlarged.forEach(preview => preview.classList.remove('enlarged'))
-      }
-      document.querySelector(`#${imageId}`).className = 'enlarged';
+      document.querySelector(`#${imageId}`).classList.toggle('enlarged');
     }
     root.append(projectNode);
     document.querySelector(`#${imageId}`).addEventListener('click', () => enlarge());
