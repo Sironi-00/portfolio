@@ -17,9 +17,11 @@ const createProject = (projectJson, index) => {
     <h2>${name}</h2>
     <div class="project-content">
       <div class="preview ${imgSrc.length>0 || 'hidden'}">
-          <img id="${imageId}" src="${imgPath}" alt="${name} preview" />
-          <button id="${switchId}-left" class="switch left ${imgSrc.length>1 || 'hidden'}">Prev</button>
-          <button id="${switchId}-right" class="switch right ${imgSrc.length>1 || 'hidden'}">Next</button>
+          <div class="image">
+              <img id="${imageId}" src="${imgPath}" alt="${name} preview" />
+              <button id="${switchId}-left" class="switch left ${imgSrc.length>1 || 'hidden'}">Prev</button>
+              <button id="${switchId}-right" class="switch right ${imgSrc.length>1 || 'hidden'}">Next</button>
+          </div>
       </div>
       <div class="description">
           <p>

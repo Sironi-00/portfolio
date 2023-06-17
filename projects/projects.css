@@ -123,10 +123,8 @@ main {
 }
 .project {
     flex: 1 1 45%;
-    /* width: 45%; */
-    /* width: auto; */
     min-width: min(300px, 60%);
-    max-width: max(600px, 45%);
+    max-width: max(600px, 55%); /* Need fine tuning */
     background-color: #0003;
     border: 0.1rem solid #FFF;
     margin: 0.25rem;
@@ -147,16 +145,21 @@ main {
     }
 }
 .project .preview {
-    flex: 1 1 55%;
-    /* width: 45%; */
-    min-width: max(300px, 63%);
+    /* flex: 1 1 55%; */
+    flex: 1 1 auto;
+    min-width: min(min-content, 63%);
     max-width: max(440px, 63%);
+
     height: max-content;
+    overflow: hidden;
+}
+.preview .image {
+    width: max-content;
+    max-width: 100%;
     background-color: #256;
     border: 0.1rem solid #0003;
     margin: 0.25rem 0 ;
     position: relative;
-    overflow: hidden;
 }
 .preview img {
     width: 100%;
@@ -166,7 +169,6 @@ main {
     cursor: pointer;
 }
 .preview img.enlarged {
-    /* scale: 1.05; */
     object-fit: fill;
     width: 100%;
 }
@@ -174,8 +176,8 @@ main {
     position: absolute;
     bottom: 0.5rem;
     padding: 0.25rem 0.5rem;
-    background-color: #0003;
-    border: 0.1rem solid #FFF;
+    background-color: #FFF;
+    border: 0.1rem solid #000;
 }
 .switch.left {
     left: 0.1rem;
@@ -184,12 +186,12 @@ main {
     right: 0.1rem;
 }
 .hidden {
-    display: none;
+    display: none !important;
 }
 .description {
     flex: 1 1 30%;
-    background-color: #0002;
-    padding: 0.25rem 0.75rem;
+    max-width: 85%;
+    padding: 0.25rem 1rem;
     height: max-content;
 }
 .description p {
@@ -198,6 +200,8 @@ main {
 }
 .description .tools {
     display: flex;
+    max-width: 60%;
+    margin: 0.5rem auto;
     justify-content: space-evenly;
     list-style: none;
 }
@@ -211,7 +215,9 @@ main {
 }
 .description .buttons {
     display: flex;
+    max-width: 60%;
     justify-content: space-evenly;
+    margin: 0 auto;
 }
 .description .buttons a {
     color: blue;
