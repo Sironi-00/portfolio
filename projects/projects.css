@@ -1,29 +1,9 @@
-.dev-warning {
-    position: fixed;
-    z-index: 1;
-    bottom: 1%;
-    right: 2%;
-    animation: blink 2.5s linear 0.7s infinite;
-}
-@keyframes blink {
-    from {}
-    35% {
-        scale: 1;
-    }
-    50% {
-        scale: 1.15;
-    }
-    65% {
-        scale: 1.05;
-    }
-    to {}
-}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border-radius: 0.35rem;
-    transition: all 0.35s;
+    transition: all 0.5s;
 }
 :root {
     --nav-x: 4rem;
@@ -31,7 +11,6 @@
     --pad1: 0.5rem;
 }
 body {
-    background-color: #EEE;
     position: relative;
     height: 100vh;
     max-height: 100dvh;
@@ -42,7 +21,7 @@ nav a {
     color: #000;
     /* text-shadow: 1px 1px 2px #000; */
     text-decoration: none;
-        box-shadow: 3px 3px 0 #0003, 0 0 0.1rem 0 #000;
+    box-shadow: 3px 3px 0 #0003, 0 0 0.1rem 0 #000;
 }
 nav a:hover {
     text-decoration: underline;
@@ -81,6 +60,10 @@ nav a:active {
     nav {
         display: flex;
         justify-content: space-evenly;
+        position: sticky;
+        top: 0.25rem;
+        margin-bottom: 0.55rem;
+        z-index: 1;
     }
     .nav-link {
         position: relative;
@@ -178,6 +161,7 @@ main {
     padding: 0.25rem 0.5rem;
     background-color: #FFF;
     border: 0.1rem solid #000;
+    
 }
 .switch.left {
     left: 0.1rem;
@@ -190,7 +174,7 @@ main {
 }
 .description {
     flex: 1 1 30%;
-    max-width: 85%;
+    /* max-width: 85%; */
     padding: 0.25rem 1rem;
     height: max-content;
 }
