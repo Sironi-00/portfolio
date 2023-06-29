@@ -150,6 +150,7 @@ main {
     max-height: 440px;
     object-fit: contain;
     cursor: pointer;
+    display: block;
 }
 .preview img.enlarged {
     object-fit: fill;
