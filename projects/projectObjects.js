@@ -83,6 +83,16 @@ const data = [
       tools: ["React", "React Router", "npm"],
       features: ["Search", "Category"],
     },
+  }, {
+    name: "E-Commerce API",
+    imgSrc: [],
+    liveLink: "",
+    repoLink: "https://github.com/Sironi-00/eCommerceProject",
+    description: {
+      head: "This is a Rest API that use OpenAPI Swagger documentation for the routes and functions",
+      tools: ["Express", "Postgres", "Swagger", "Node"],
+      features: ["A Restful API", "An API server uses postgres", "Session authentication with express-session"],
+    },
   }
 ];
 

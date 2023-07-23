@@ -29,7 +29,7 @@ const createProject = (projectJson, index) => {
           </p>
           <div class="buttons">
               <a target="_blank" class="${liveLink.length>0 || 'hidden'}" href="${liveLink}">Live</a>
-              <a target="_blank" href="${repoLink}">GitHub</a>
+              <a target="_blank" href="${repoLink}">Repository</a>
           </div>
           <ul class="tools">
               ${description.tools.map((tool, index) => `<li key="tools-${index}">${tool}</li>`).join("")}

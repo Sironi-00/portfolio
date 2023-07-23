@@ -115,9 +115,31 @@ ul, ol {
     /* Main container */
     margin: 0 auto;
     padding: 0 1.5rem;
-    background-color: var(--color1);
+    /* background-color: var(--color1); */
     box-shadow: 0 0 1rem var(--color3);
     position: relative;
+}
+#view::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    /* width: 10rem; */
+    height: 50dvh;
+    top: 0;
+    left: 0;
+    background-color: #ee1;
+    background: linear-gradient(190deg, #0000, #0de, #0000);
+}
+#view::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    /* width: 10rem; */
+    height: 100dvh;
+    top: 0;
+    right: 0;
+    background-color: #ee1;
+    background: linear-gradient(190deg, #0de, #0000, #0de);
 }
 @media screen and (min-width: 1200px) {
     #view {
@@ -222,6 +244,14 @@ input[type=submit] {
     background-color: #0000;
     animation: pulsate 1.5s linear 0.5s infinite;
 }
+#timeline::after {
+    content: "🖱️";
+    position: absolute;
+    bottom: 0rem;
+    right: 1.5rem;
+    font-size: 120%;
+    opacity: 0.7;
+}
 @keyframes pulsate {
     50% {
         box-shadow: inset 0 0 0 0.5rem #0004;
@@ -270,4 +300,30 @@ input[type=submit] {
     width: 0.35rem;
     height: 1rem;
     background-color: var(--color3);
+}
+@media only print {
+/* @media screen { */
+    /* .no-print, .no-print * { */
+    .no-print {
+        display: none !important;
+    }
+    .hidden-articles {
+        display: block !important;
+    }
+}
+
+
+body {
+  background:linear-gradient(to right top, #0de 50%, var(--color0) 50%) no-repeat;
+  background-size:100% calc(100% - 100vh + 6px);
+}
+body::before {
+  content:"";
+  position:fixed;
+  left:0px;
+  top:6px;
+  bottom:0;
+  width:100%;
+  background: var(--color0);
+  z-index:-1;
 }
