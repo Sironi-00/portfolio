@@ -14,8 +14,8 @@ const data = [
   {
     name: "Steps Todo",
     imgSrc: [
-      "./previews/steps_to.png",
-      "./previews/steps_to_mobile (childrens).png",
+      "steps_to.png",
+      "steps_to_mobile (childrens).png",
     ],
     liveLink: "https://sironi-00.github.io/steps-to",
     repoLink: "https://github.com/Sironi-00/steps-to",
@@ -23,6 +23,7 @@ const data = [
       head: "A Todo App stores parent and children(s) todos.",
       tools: ["Html", "CSS", "JavaScript"],
       features: [
+        "Responsive",
         "Use local Storage to store todos across sessions.",
         "Use Cookies to store theme preferrence.",
         "Dark & Light modes",
@@ -32,7 +33,7 @@ const data = [
   },
   {
     name: "Nintendo Switch",
-    imgSrc: ["./previews/nintendo.png", "./previews/nintendo_blue.png"],
+    imgSrc: ["nintendo.png", "nintendo_blue.png"],
     liveLink: "https://sironi-00.github.io/Playground/handheld_console",
     repoLink:
       "https://github.com/Sironi-00/Playground/tree/main/handheld_console",
@@ -49,7 +50,7 @@ const data = [
   },
   {
     name: "Interactive Quotes",
-    imgSrc: ["./previews/interactive_quotes.png"],
+    imgSrc: ["interactive_quotes.png"],
     liveLink: "https://sironi-00.github.io/interactive-quotes",
     repoLink: "https://github.com/Sironi-00/interactive-quotes",
     description: {
@@ -57,7 +58,7 @@ const data = [
       tools: ["Html", "CSS", "JavaScript"],
       features: [
         "Reload gets a different quote (selected at random).",
-        "Reveal fills the auto automatical, Allowing the user to view complete quote. ",
+        "Reveal fills the auto automatically, Allowing the user to view complete quote. ",
         "Clear to return quotes to unfilled state",
         "Using an API would result in broader and diverse quotes",
       ],
@@ -71,7 +72,7 @@ const data = [
     description: {
       head: "Make Spotify music playlist using the Spotify API and React",
       tools: ["npm", "JavaScript", "React"],
-      features: ["Make request to API", "Search and Render fetched song."],
+      features: ["Make request to API", "Search and Render fetched song.", "Saves playlist in user's account"],
     },
   }, {
     name: "Adopt A Pet",
@@ -80,17 +81,17 @@ const data = [
     repoLink: "https://github.com/Sironi-00/adopt-a-pet",
     description: {
       head: "Using React Router to render pets and filter based on user's search",
-      tools: ["React", "React Router", "npm"],
-      features: ["Search", "Category"],
+      tools: ["React", "ReactRouter", "npm"],
+      features: ["Search for pet", "Pets based on Category"],
     },
   }, {
     name: "E-Commerce API",
-    imgSrc: [],
+    imgSrc: ["eCommerce-api.png"],
     liveLink: "",
     repoLink: "https://github.com/Sironi-00/eCommerceProject",
     description: {
       head: "This is a Rest API that use OpenAPI Swagger documentation for the routes and functions",
-      tools: ["Express", "Postgres", "Swagger", "Node"],
+      tools: ["ExpressJs", "Postgres", "Swagger", "NodeJs"],
       features: ["A Restful API", "An API server uses postgres", "Session authentication with express-session"],
     },
   }

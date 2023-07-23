@@ -152,10 +152,6 @@ main {
     cursor: pointer;
     display: block;
 }
-.preview img.enlarged {
-    object-fit: fill;
-    width: 100%;
-}
 .switch {
     position: absolute;
     bottom: 0.5rem;
@@ -193,6 +189,7 @@ main {
 .description .tools li {
     background-color: #0002;
     padding: 0 0.25rem;
+    margin: 0.1rem;
     border-top: 0.2rem solid #0000;
 }
 .description .tools li:nth-of-type(odd) {
@@ -217,4 +214,16 @@ main {
 .description li {
     border-bottom: 2px solid #0004;
     border-radius: 0;
+}
+.external-link {
+    position: relative;
+}
+.external-link::after {
+    content: "↗";
+    color: black;
+    opacity: 0.45;
+    position: absolute;
+    top: 0rem;
+    right: -0.25rem;
+    font-size: 65%;
 }
