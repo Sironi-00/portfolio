@@ -300,4 +300,7 @@ input[type=submit] {
     .hidden-articles {
         display: block !important;
     }
+    .external-link::after {
+        display: none;
+    }
 }
